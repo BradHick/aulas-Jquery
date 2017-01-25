@@ -1,5 +1,16 @@
 
-   
+  var umaPropaganda = function() {
+    var propagandas = ["O que vc acha de comprar uma moto?",
+                      "O que vc acha de comprar um Iphne (no valor de uma casa)",
+                      "O que vc acha de comprar um carro",
+                      "O que vc acha de comprar um pen drive"
+                    ];
+    var posicaoPropaganda = Math.floor(propagandas.length * Math.random());
+    var textoPropaganda = propagandas[posicaoPropaganda];
+    var tr = $("<tr>").append($("<td>"));
+    tr.find("td").text(textoPropaganda);
+    return tr;
+  }
 
 	var atualizaDados = function(){//atualização feita para todos os carrinhos da página
     var carrinhos = $(".carrinho");
@@ -41,6 +52,14 @@
 		atualizaDados();
     $(".undo").click(undo);
 		$(".remove-item").click(removeItem);
+
+    $(".carrinho").each(function() {
+      $(this).find("tr:nth-child(3n)").each(function(){
+        umaPropaganda().insertAfter($(this));
+      });
+
+    });
+
 	};
 
   $(aposInicializado);
