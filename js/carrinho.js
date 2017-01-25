@@ -7,8 +7,8 @@
                     ];
     var posicaoPropaganda = Math.floor(propagandas.length * Math.random());
     var textoPropaganda = propagandas[posicaoPropaganda];
-    var tr = $("<tr>").append($("<td>"));
-    tr.find("td").text(textoPropaganda);
+    var tr = $("<tr>").addClass("propaganda").append($("<td>"));
+    tr.find("td").attr("colspan", 6).text(textoPropaganda);
     return tr;
   }
 
