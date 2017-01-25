@@ -1,7 +1,7 @@
 
 
 	var atualizaDados = function(){
-		var items = $(".item-total");
+		var items = $(".item-total:visible");
 		var total = 0;
 		for(var i=0; i < items.length; i++) {
 				var conteudo = $(items[i]).text();
@@ -23,6 +23,7 @@
 	}
 
   var undo = function(){
+    $("tr:visible").removeClass("recuperado");
     var trs = $("tr:hidden");
     trs.addClass("recuperado");
     trs.show();
