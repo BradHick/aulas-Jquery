@@ -16,14 +16,21 @@
 		event.preventDefault(); //evita que a página tete ir pra algum luga
 
 		var self = $(this);
-		self.closest("tr").remove();
+		self.closest("tr").hide();
 		atualizaDados();
 
 
 	}
 
+  var undo = function(){
+    var trs = $("tr:hidden");
+    trs.addClass("recuperado");
+    trs.show();
+  }
+
 	var aposInicializado = function() {
 		atualizaDados();
+    $("#undo").click(undo);
 		$(".remove-item").click(removeItem);
 	};
 
