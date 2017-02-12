@@ -59,6 +59,15 @@ var tiraDestaque  =function() {
 
 $("tbody tr").hover(darDestaque, tiraDestaque);
 
+var escondePropagandas = function(event) {
+  event.preventDefault();
+  $(".propaganda").fadeOut();
+}
+
+var mostraPropagandas = function(event) {
+  event.preventDefault();
+  $(".propaganda").fadeIn();
+}
 
 	var aposInicializado = function() {
 		atualizaDados();
@@ -71,6 +80,8 @@ $("tbody tr").hover(darDestaque, tiraDestaque);
       });
 
     });
+    $("#esconde-propagandas").click(escondePropagandas);
+    $("#mostra-propagandas").click(mostraPropagandas);
 
 	};
 
