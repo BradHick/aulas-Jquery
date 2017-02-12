@@ -68,6 +68,11 @@ td {
 	background: #ccc;
 }
 
+#mostra-propagandas{
+	display: none;
+
+}
+
 input[type=button] {
 	background: #F90;
 	border: none;

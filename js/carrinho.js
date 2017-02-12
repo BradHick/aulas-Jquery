@@ -59,15 +59,13 @@ var tiraDestaque  =function() {
 
 $("tbody tr").hover(darDestaque, tiraDestaque);
 
-var escondePropagandas = function(event) {
+var alternaPropagandas = function(event) {
   event.preventDefault();
-  $(".propaganda").fadeOut();
+  $(".propaganda").fadeToggle();
+  $(".alterna-propaganda").toggle();
+
 }
 
-var mostraPropagandas = function(event) {
-  event.preventDefault();
-  $(".propaganda").fadeIn();
-}
 
 	var aposInicializado = function() {
 		atualizaDados();
@@ -80,8 +78,8 @@ var mostraPropagandas = function(event) {
       });
 
     });
-    $("#esconde-propagandas").click(escondePropagandas);
-    $("#mostra-propagandas").click(mostraPropagandas);
+    $("#esconde-propagandas").click(alternaPropagandas);
+    $("#mostra-propagandas").click(alternaPropagandas);
 
 	};
 
