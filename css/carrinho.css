@@ -64,6 +64,10 @@ td {
 	padding: 0.5em;
 }
 
+.hovering{
+	background: #ccc;
+}
+
 input[type=button] {
 	background: #F90;
 	border: none;

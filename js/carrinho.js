@@ -48,6 +48,18 @@
     atualizaDados();
   }
 
+var darDestaque  =function() {
+  $(this).addClass("hovering")
+}
+
+var tiraDestaque  =function() {
+  $(this).removeClass("hovering")
+}
+
+
+$("tbody tr").hover(darDestaque, tiraDestaque);
+
+
 	var aposInicializado = function() {
 		atualizaDados();
     $(".undo").click(undo);
